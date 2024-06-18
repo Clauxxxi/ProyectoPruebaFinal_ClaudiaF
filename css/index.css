@@ -1,0 +1,519 @@
+/*RESET Y CARACTERÍSTICAS COMUNES*/ 
+
+:root {
+    --section_spaces: 2em auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+img {
+    width: 100%; 
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black; 
+}
+
+h1, h2, h3, h4, h5, p, a, li, span, button {
+    font-family: "Raleway", sans-serif;
+}
+
+
+/*HEADER HOME*/
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    background-image: url('../Media/background__home.png'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    width: 100vw;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    padding: 3em; 
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em; 
+}
+
+.header__menu__links {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    padding: 2em; 
+    font-size: 15px; 
+    color: black;
+    margin-left: 30px; 
+}
+
+
+.header__menu__links__link a {
+    display: block; 
+    transition: transform 0.3s ease; 
+}
+
+.header__menu__links__link a:hover {
+    color: #A2D9CE; 
+    transform: scale(1.3);
+}
+
+/*HEADER DE CADA SECCIÓN*/
+
+
+.section__header {
+    display: flex;
+    justify-content: space-between; 
+    text-transform: uppercase;
+    padding: 4em; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.section__logo {
+    position: absolute;
+    top: 1em; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; 
+
+}
+
+.section__menu__links {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    gap: 10px;
+    padding: 1em; 
+    font-size: 15px; 
+    margin-left: 30px; 
+    list-style: none;
+}
+
+.section__menu__links__link a {
+    display: block; 
+    transition: transform 0.3s ease; 
+    color: black; 
+}
+
+.section__menu__links__link a:hover {
+    color: #719DAF; 
+    transform: scale(1.3);
+}
+
+.section__menu-right {
+    display: flex;
+    flex-direction: column; 
+    text-align: right;
+    font-size: 15px; 
+    list-style: none;
+    line-height: 2em; 
+}
+
+.section__menu-icon {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*BOLSO CHIHIRO*/
+
+section {
+    margin: 0 auto; 
+    padding: 4em 0;
+    text-align: center; 
+}
+
+.ghibli {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1em; 
+    margin-top: 2em; 
+    max-width: 1200px; 
+    flex-wrap: wrap;
+}
+
+.ghibli__content {
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    margin: 0; 
+    justify-content: space-between; 
+    font-size: 15px; 
+    line-height: 30px;
+}
+
+.ghibli__inner {
+    display: flex; 
+    flex: 1; 
+    margin: 0 1em; 
+    align-items: center; 
+   
+}
+
+.ghibli__inner.right {
+    flex: 0.8; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+
+}
+
+.ghibli__inner img {
+    width: 100%;
+    height: auto; 
+    border-radius: 1em; 
+    display: flex;
+    align-items: left;
+  
+}
+
+.ghibli__inner-text {
+    display: flex; 
+    flex-direction: column;
+    text-align: center; 
+    padding: 4em;
+    gap: 10px; 
+}
+
+.ghibli__inner-ilustration img {
+    display: flex;
+    align-items: baseline; 
+
+}
+
+/*CARRUSSEL BOLSOS*/
+
+.carrussel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7em; 
+    gap: 10px; 
+}
+
+.carrussel__items {
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.carrussel__item img {
+    width: 140px; 
+    height: auto;
+}
+
+.carrussel__item {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.carrussel__item:hover {
+    transform: scale(1.4);
+    z-index: 40; 
+}
+
+
+.carrussel__btn {
+    margin: 20px auto;
+    padding: 10px 60px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: black; 
+    border-radius: 2em;
+    color: white; 
+    text-transform: uppercase; 
+}
+
+.carrussel__btn:hover {
+    background-color: white; 
+    color: black; 
+}
+
+/*SLIDER*/ 
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: auto; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider__container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider__img {
+    min-width: 100%;
+    transition: opacity 1s;
+}
+
+.slider__img img {
+    width: 100%;
+    display: block;
+    border-radius: 1em; 
+}
+
+
+/*SECCIONES SPIRITED AWAY Y HOWL'S MOVING CASTLE*/
+
+/*BANNER PRINCIPAL*/ 
+
+.banner__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*INTRODUCTION*/
+
+.introduction {
+    display: flex; 
+    justify-content: center;
+    padding: 4em; 
+}
+
+.introduction__container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    text-align: center;
+    line-height: 2em;
+    width: 50%; 
+}
+
+/*IMAGENES ESCALONADAS*/
+
+.staggered {
+    display: flex; 
+    padding: 4em; 
+   
+}
+
+.staggered__container {
+    display: flex; 
+    justify-content: center;
+    gap: 4em; 
+   
+}
+
+.staggered__top {
+    display: flex; 
+    max-width: 800px; 
+
+}
+
+.staggered__top-img {
+    margin-top: -80px; 
+    max-width: 1000px; 
+    border-radius: 1em; 
+
+}
+
+.staggered__bottom {
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: column; 
+    align-items: end; 
+   
+
+}
+
+.staggered__bottom-img {
+    max-width: 450px;
+    border-radius: 1em; 
+
+}
+
+.staggered__bottom-text {
+   display: flex; 
+   justify-content: baseline; 
+   flex-direction: column; 
+   align-items: end;
+   text-align: end;
+   font-size: 11px; 
+   gap: 5px; 
+   line-height: 20px;
+
+}
+
+/*PRINCIPAL TEXT*/
+
+.principal {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em; 
+
+}
+
+.principal__container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.principal__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px; 
+    text-align: center;
+    max-width: 15em;
+    font-weight: bold;
+    line-height: 1.7em;
+    text-transform: uppercase;
+    
+}
+.principal__img-text {
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px; 
+    gap: 10px; 
+    margin-top: 15px;
+    font-size: 12px;
+}
+.principal__img img{
+    display: flex;
+    max-width: 500px;
+    border-radius: 1em;
+}
+
+.ilustration__ghibli {
+    max-width: 100vw; 
+}
+
+
+/*FOOTER COMÚN EN TODAS LAS PÁGINAS DE LA WEB*/ 
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 4em;
+    border-top: 1px solid #e0e0e0;
+    font-size: 12px; 
+    background-color: white; 
+    
+}
+
+.footer__logo {
+    flex: 1;
+}
+
+.footer__logo img {
+    width: 250px; 
+    border-radius: 2em;
+}
+
+.footer__links {
+    display: flex;
+    flex: 3; 
+    justify-content: space-between;
+}
+
+.footer__links-column {
+    margin-right: 20px; 
+}
+
+.footer__links-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__links-column li {
+    margin-bottom: 0.5em;
+    line-height: 1.5; 
+}
+
+.footer__subscription {
+    max-width: 300px;
+}
+
+.footer__subscription h4 {
+    font-size: 1.2em;
+    margin-bottom: 1em; 
+}
+
+.footer__subscription p {
+    margin-bottom: 1em; 
+    display: flex;
+
+}
+
+.footer__subscription form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__subscription label {
+    margin-bottom: 1em; 
+}
+
+.footer__subscription input {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 0.4px solid grey; 
+    border-radius: 4px;
+}
+
+.footer__subscription button {
+    padding: 0.5em;
+    background-color: black; 
+    color: white; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer__subscription button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
